@@ -1,17 +1,8 @@
-import React from "react"
-
-class Footer extends React.Component{
-    constructor(props){
-    super(props);
-    }
-    render(){
-        return(
-            <div>
-                <h1> done kack </h1>
-                {this.props.paragrap()}
-            </div>
-        );
-    }
+const Footer=({SeeValue})=>{
+    return(
+        <div>
+            <h1>{!SeeValue ? "See U Oll" : SeeValue}</h1>
+        </div>
+    );
 }
-
 export default Footer;

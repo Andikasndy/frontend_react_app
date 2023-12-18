@@ -6,6 +6,10 @@ function Intro(props) {
       <h1>helo guys!!</h1>
       <p> halo nama saya : {props.nama}</p>
     </div>
+
+
+
+    // state in reacty
   );
 }
 
