@@ -2,6 +2,7 @@ import Intro from './components/intro';
 import Button from './components/button';
 import Footer from './components/footer';
 import { useState } from 'react';
+import './App.css'
 
 const App = () => {
   const nama="andika sandi yudistira";
