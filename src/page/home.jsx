@@ -1,8 +1,9 @@
-const home =()=>{
+import First from "../components/first"
+
+const Home =()=>{
     return (
-        <>
-        <p>ini adalah page home</p>
-        </>
+        <First/>
     )
 }
-export default home
+
+export default Home

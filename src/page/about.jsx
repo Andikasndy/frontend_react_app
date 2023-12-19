@@ -1,8 +1,7 @@
-const about =()=>{
+import Second from "../components/second"
+const About =()=>{
     return (
-        <>
-        <p>ini adalah page about</p>
-        </>
+        <Second/>
     )
 }
-export default about
+export default About
