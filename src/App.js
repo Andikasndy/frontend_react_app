@@ -5,10 +5,15 @@ import './App.css'
 // router
 import Home from './page/home';
 import About from './page/about';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Form} from 'react-router-dom';
 import Notfund from './page/notfund';
 // Hooks
 import React, { useState,useEffect } from 'react';
+//hooks useref
+import {useRef} from'react';
+
+
+
 const App = () => {
   const nama="andika sandi yudistira";
 
@@ -44,6 +49,17 @@ const App = () => {
     }
   },[pacarSaya])
 
+// hooks useref
+const linkRef =useRef(null)
+const goToDwonload = (ref) =>{
+  console.log(ref)
+  window.scrollTo({
+    top:ref.offsetTop,
+    left:0,
+    behavior:'smooth'
+  })
+}
+
   return (
     //state & props component
     // <div>
@@ -65,11 +81,20 @@ const App = () => {
     // </div>
     
     // hooks state 
+    // <>
+    // <h2>{getMetiont}</h2>
+    // <h1>saya memiliki pacar :{pacarSaya}</h1>
+    // <button onClick={()=>setPacar((prev) => prev + 1)}>Tambah pacar</button>
+    // <button onClick={()=>setPacar((prev) => prev - 1)}>Kurangi pacar</button>
+    // </>
+
+    //useref scroll / membuat scrollpada react
     <>
-    <h2>{getMetiont}</h2>
-    <h1>saya memiliki pacar :{pacarSaya}</h1>
-    <button onClick={()=>setPacar((prev) => prev + 1)}>Tambah pacar</button>
-    <button onClick={()=>setPacar((prev) => prev - 1)}>Kurangi pacar</button>
+    <div onClick={()=> goToDwonload(linkRef.current)}>
+    <img src="img" alt=" " />
+    </div>
+    <p>eslint</p>
+  <a href="/" ref ={linkRef}>continue to dwonload</a>
     </>
   );
 }

@@ -6,6 +6,7 @@ const First =()=>{
         <p>ini adalah page home</p>
         <button onClick={()=> navigate('/About')}>cek halaman about</button>
         </>
+        
     )
 }
 export default First
